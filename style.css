@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body * {
+    font-family: 'Roboto';
+}
+body {
+    background: linear-gradient(150deg, rgb(43, 43, 44), black);
+    height: 100vh;
+    text-align: center;
+}
+header {
+    padding: 85px 0px;
+    /* border: 1px solid red; <- Teste para conferir caixa em que a 'logo.svg' foi alocada! */
+}
+.card {
+    display: inline-block;
+    width: 354px;
+    height: 508px;
+
+    background-image: url(./assets/bg-explorer.svg);
+    cursor: pointer;
+
+    /* Aplicação da animação do fundo */
+    opacity: 0; 
+    transform: translateX(-100px);
+    animation: animacao 0.4s forwards; 
+
+    -webkit-user-select: none;
+    user-select: none;
+}
+.card > img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #F7DD43;
+    margin-top: 100px;
+
+    -webkit-user-select: none;
+    user-select: none;
+    pointer-events: none;
+}
+.info {
+    text-align: left;
+    margin-left: 70px;
+    color: white;
+    margin-top: 115px;
+
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.info h1 {
+    font-size: 18px;
+    line-height: 140%;
+}
+
+.info p {
+    font-size: 14px;
+    line-height: 160%;
+}
+
+@keyframes animacao { /* Animação */
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
